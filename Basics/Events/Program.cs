@@ -28,7 +28,7 @@ namespace EventExample
     {
         public void DoSomething()
         {
-            Console.WriteLine("Child does something");
+            Console.WriteLine("Child does something.");
             OnEvent();
         }
         public event EventHandler ChildEvent;
@@ -40,8 +40,15 @@ namespace EventExample
         public void OnEvent()
         {
             Console.WriteLine("Child's event gets triggert.");
-            ChildEvent?.Invoke(sender: this, EventArgs.Empty);
+            ChildEvent?.Invoke(
+                sender: this,
+                e: EventArgs.Empty);
         }
     }
 }
 
+/*
+Child does something.
+Child's event gets triggert.
+Partent gets notified.
+*/
