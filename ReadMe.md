@@ -1,0 +1,2 @@
+Sometimes I forget aspects of coding because I rarely use this specific aspects. "Use it or lose it". My approach to this issue is to look at my own code from the past to give myself a quick refresh on the topic. To take this a step further I want to create a collection of example code here for myself and everybody else who finds it useful. Fixes, improvements, questions (Feynman Technique!) and additional comments for further clarification are very welcome.
+
