@@ -7,7 +7,7 @@ namespace Polymorphism
     {
         static void Main()
         {
-            var doggo = new Doggo();
+            var doggo = new Doggo {Name = "Pepe"};
             // will use the method of the inherited class because the method of the base class was hidden.
             doggo.Introduction();
             // will use the method of the inherited class because it was overridden.
@@ -16,8 +16,8 @@ namespace Polymorphism
             //This is the actual polymorphism
             var Mammals = new List<Mammal>
             {
-                new Ducky(),
-                new Human()
+                new Ducky{Name = "Lauri"},
+                new Human{Name = "Arvid"}
             };
             foreach (var mammal in Mammals)
             {
@@ -30,9 +30,10 @@ namespace Polymorphism
     }
     public class Mammal
     {
+        public string Name;
         public void Introduction()
         {
-            Console.WriteLine("I am a Mammal");
+            Console.WriteLine($"I am a Mammal, my name is {Name}");
         }
         public virtual void Greeting()
         {
@@ -43,7 +44,7 @@ namespace Polymorphism
     {
         public new void Introduction() // 'new' only hides the method of the base class
         {
-            Console.WriteLine("I am a Doggo");
+            Console.WriteLine($"I am a Doggo, my name is {Name}");
         }
         public override void Greeting() // 'override' overrides (duh!) the method of the base class
         {
@@ -55,7 +56,7 @@ namespace Polymorphism
     {
         public new void Introduction()
         {
-            Console.WriteLine("I am a Ducky");
+            Console.WriteLine($"I am a Ducky, my name is {Name}");
         }
         public override void Greeting()
         {
@@ -67,7 +68,7 @@ namespace Polymorphism
     {        
         public new void Introduction()
         {
-            Console.WriteLine("I am a Human");
+            Console.WriteLine($"I am a Human, my name is {Name}");
         }
         public override void Greeting()
         {
@@ -78,13 +79,13 @@ namespace Polymorphism
 }
 
 /*
-I am a Doogo
+I am a Doggo, my name is Pepe
 I like to say:
 Woof!
-I am a Mammal
+I am a Mammal, my name is Lauri
 I like to say:
 Quack!
-I am a Mammal
+I am a Mammal, my name is Arvid
 I like to say:
 Hello!
 */
