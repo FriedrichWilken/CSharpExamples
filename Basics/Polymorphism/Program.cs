@@ -43,7 +43,7 @@ namespace Polymorphism
     {
         public new void Introduction() // 'new' only hides the method of the base class
         {
-            Console.WriteLine("I am a Doogo");
+            Console.WriteLine("I am a Doggo");
         }
         public override void Greeting() // 'override' overrides (duh!) the method of the base class
         {
